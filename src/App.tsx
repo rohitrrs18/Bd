@@ -30,7 +30,7 @@ function App() {
   // Background music (auto-start after user interaction)
   useEffect(() => {
     const handleFirstClick = () => {
-      const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3')
+      const audio = new Audio('/music/birthday-song.mp3')  // ← Change this path
       audio.loop = true
       audio.volume = 0.3
       audio.play().catch(e => console.log('Audio needs user interaction'))
