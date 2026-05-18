@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    
+    <!-- Meta Tags -->
+    <meta name="theme-color" content="#9B59B6" />
+    <meta name="description" content="A heartfelt birthday celebration for Prachi - Our beloved sister, guiding light, and source of infinite love." />
+    <meta name="author" content="With Eternal Love 💫" />
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Happy Birthday Prachi | A Celebration of Love" />
+    <meta property="og:description" content="Celebrating the beautiful soul who makes our world brighter." />
+    <meta property="og:type" content="website" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <title>Happy Birthday Prachi | A Celebration of Love</title>
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Montserrat', 'Playfair Display', serif;
+        overflow-x: hidden;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="%239B59B6" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') 12 5, auto;
+      }
+
+      /* Elegant Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #9B59B6, #E74C3C);
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #8E44AD, #C0392B);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Elegant Gradient Background */
+      .gradient-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        background-size: 200% 200%;
+        animation: gradientShift 15s ease infinite;
+      }
+
+      @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      /* Subtle Pattern Overlay */
+      .pattern-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><path fill="none" d="M10,10 L90,10 M10,30 L90,30 M10,50 L90,50 M10,70 L90,70 M10,90 L90,90 M30,10 L30,90 M50,10 L50,90 M70,10 L70,90 M90,10 L90,90" stroke="white" stroke-width="0.5"/><circle cx="50" cy="50" r="40" stroke="white" stroke-width="0.5" fill="none"/><circle cx="50" cy="50" r="20" stroke="white" stroke-width="0.5" fill="none"/></svg>');
+        background-repeat: repeat;
+      }
+
+      /* Elegant Loader */
+      .loader-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        animation: fadeOutLoader 2s ease-in-out forwards;
+        pointer-events: none;
+      }
+
+      @keyframes fadeOutLoader {
+        0% { opacity: 1; visibility: visible; }
+        70% { opacity: 1; }
+        100% { opacity: 0; visibility: hidden; }
+      }
+
+      .loader {
+        width: 60px;
+        height: 60px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top: 3px solid #ffffff;
+        border-radius: 50%;
+        animation: spin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      /* Floating Particles */
+      .floating-particle {
+        position: fixed;
+        pointer-events: none;
+        z-index: 999;
+        font-size: 12px;
+        opacity: 0.6;
+        animation: floatParticle 12s ease-in-out infinite;
+      }
+
+      @keyframes floatParticle {
+        0% {
+          transform: translateY(100vh) translateX(0) rotate(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.6;
+        }
+        90% {
+          opacity: 0.6;
+        }
+        100% {
+          transform: translateY(-100px) translateX(100px) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      /* Elegant Music Control */
+      .music-control {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 45px;
+        height: 45px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10000;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .music-control:hover {
+        transform: scale(1.1);
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .music-control::before {
+        content: "♪";
+        font-size: 22px;
+        color: white;
+        font-weight: bold;
+        animation: subtlePulse 2s ease-in-out infinite;
+      }
+
+      @keyframes subtlePulse {
+        0%, 100% { opacity: 0.7; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.1); }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .music-control {
+          bottom: 20px;
+          right: 20px;
+          width: 40px;
+          height: 40px;
+        }
+        
+        .music-control::before {
+          font-size: 18px;
+        }
+        
+        .floating-particle {
+          font-size: 10px;
+        }
+      }
+
+      /* Elegant Selection */
+      ::selection {
+        background: rgba(155, 89, 182, 0.3);
+        color: white;
+      }
+
+      ::-moz-selection {
+        background: rgba(155, 89, 182, 0.3);
+        color: white;
+      }
+
+      /* Focus Styles */
+      button:focus, a:focus {
+        outline: 2px solid rgba(255, 255, 255, 0.5);
+        outline-offset: 2px;
+      }
+
+      /* Smooth Loading for Root */
+      #root {
+        animation: contentFadeIn 1.2s ease-out;
+      }
+
+      @keyframes contentFadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+
+    <!-- Music Control -->
+    <div class="music-control" id="musicControl"></div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <script>
+      // Create elegant floating particles
+      const symbols = ['✨', '💫', '⭐', '🌙', '🌸', '💜', '🦋', '💎'];
+      
+      function createFloatingParticle() {
+        const particle = document.createElement('div');
+        particle.className = 'floating-particle';
+        particle.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDuration = Math.random() * 8 + 8 + 's';
+        particle.style.animationDelay = Math.random() * 5 + 's';
+        particle.style.fontSize = Math.random() * 16 + 12 + 'px';
+        particle.style.opacity = Math.random() * 0.4 + 0.2;
+        document.body.appendChild(particle);
+        
+        setTimeout(() => {
+          particle.remove();
+        }, 16000);
+      }
+
+      // Start particles after load
+      let particleInterval;
+      
+      window.addEventListener('load', () => {
+        particleInterval = setInterval(createFloatingParticle, 1500);
+        
+        setTimeout(() => {
+          const loader = document.querySelector('.loader-wrapper');
+          if (loader) {
+            loader.style.display = 'none';
+          }
+        }, 2000);
+      });
+
+      // Elegant music control
+      let audio = null;
+      let isPlaying = false;
+      const musicControl = document.getElementById('musicControl');
+      
+      // Use a more elegant birthday melody
+      const birthdayMelody = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3';
+      
+      musicControl.addEventListener('click', () => {
+        if (!audio) {
+          audio = new Audio(birthdayMelody);
+          audio.loop = true;
+          audio.volume = 0.25;
+        }
+        
+        if (isPlaying) {
+          audio.pause();
+          musicControl.style.opacity = '0.6';
+          musicControl.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            musicControl.style.transform = '';
+          }, 200);
+        } else {
+          audio.play().catch(e => console.log('Interaction needed for audio'));
+          musicControl.style.opacity = '1';
+        }
+        
+        isPlaying = !isPlaying;
+      });
+
+      // Elegant console message
+      console.log('%c✨ Happy Birthday, Prachi ✨', 'color: #9B59B6; font-size: 22px; font-family: Playfair Display; font-weight: bold;');
+      console.log('%cA beautiful soul, a loving sister, a guiding light.', 'color: #8E44AD; font-size: 14px; font-style: italic;');
+      console.log('%cMay your day be as radiant as you are. 💜', 'color: #E74C3C; font-size: 13px;');
+
+      // Clean up
+      window.addEventListener('beforeunload', () => {
+        if (particleInterval) {
+          clearInterval(particleInterval);
+        }
+        if (audio) {
+          audio.pause();
+          audio = null;
+        }
+      });
+    </script>
+  </body>
+</html>
