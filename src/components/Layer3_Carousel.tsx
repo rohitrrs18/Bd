@@ -1,6 +1,12 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { Heart, Sparkles, Star, ArrowLeft, ArrowRight, Play, Pause, ImageIcon, Loader } from 'lucide-react'
+import { Heart, Sparkles, Star, ArrowLeft, ArrowRight, Play, Pause, Loader } from 'lucide-react'
+
+// ✅ Import images properly (same as FrameWall)
+import img1 from '../assets/images/prachi9.jpg'
+import img2 from '../assets/images/prachi2.jpg'
+import img3 from '../assets/images/prachi7.jpg'
+import img4 from '../assets/images/prachi10.jpg'
 
 interface LayerProps {
   onNext: () => void
@@ -9,12 +15,8 @@ interface LayerProps {
   totalLayers: number
 }
 
-const carouselImages = [
-  '/src/assets/images/prachi9.jpg',
-  '/src/assets/images/prachi2.jpg',
-  '/src/assets/images/prachi7.jpg',
-  '/src/assets/images/prachi10.jpg'
-]
+// ✅ Use imported images instead of string paths
+const carouselImages = [img1, img2, img3, img4]
 
 const messages = [
   {
@@ -63,7 +65,8 @@ export default function Carousel({ onNext, onPrev }: LayerProps) {
           return newState
         })
       }
-      img.src = src
+      // ✅ src is already the imported image object
+      img.src = typeof src === 'string' ? src : (src as any).src || String(src)
     })
   }, [])
 
@@ -146,18 +149,19 @@ export default function Carousel({ onNext, onPrev }: LayerProps) {
             {/* Background with gradient overlay */}
             <div className={`absolute inset-0 bg-gradient-to-br ${messages[currentIndex].gradient} opacity-90`} />
             
-            {/* Background Image with loader */}
+            {/* ✅ Fixed: Use <img> tag with imported image */}
             {!imageLoaded[currentIndex] && (
               <div className="absolute inset-0 flex items-center justify-center z-10">
                 <Loader className="w-12 h-12 text-white animate-spin" />
               </div>
             )}
             
-            <div 
-              className={`absolute inset-0 bg-cover bg-center transition-opacity duration-500 ${
+            <img
+              src={carouselImages[currentIndex]}
+              alt={`Memory ${currentIndex + 1}`}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
                 imageLoaded[currentIndex] ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{ backgroundImage: `url(${carouselImages[currentIndex]})` }}
             />
             
             {/* Dark overlay for text readability */}
